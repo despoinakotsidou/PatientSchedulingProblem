@@ -1,0 +1,79 @@
+{
+    "days": 7,
+    "skill_levels": 3,
+    "shift_types": ["morning", "evening", "night"],
+    "age_groups": ["child", "adult", "senior"],
+    "occupants": [
+      {
+        "id": "patient_001",
+        "gender": "female",
+        "age_group": "adult",
+        "length_of_stay": 5,
+        "workload_produced": [1, 2, 3],
+        "skill_level_required": [1, 2, 3],
+        "room_id": "room_101"
+      }
+    ],
+    "patients": [
+      {
+        "id": "patient_002",
+        "gender": "male",
+        "age_group": "child",
+        "length_of_stay": 3,
+        "workload_produced": [1, 2],
+        "skill_level_required": [1, 2],
+        "mandatory": true,
+        "surgery_release_day": 3,
+        "surgery_duration": 2,
+        "surgeon_id": "surgeon_01",
+        "incompatible_room_ids": ["room_103"],
+        "surgery_due_day": 2
+      }
+    ],
+    "surgeons": [
+      {
+        "id": "surgeon_01",
+        "max_surgery_time": [3, 3, 2]
+      }
+    ],
+    "operating_theaters": [
+      {
+        "id": "theater_01",
+        "availability": [1, 2, 3]
+      }
+    ],
+    "rooms": [
+      {
+        "id": "room_101",
+        "capacity": 2
+      },
+      {
+        "id": "room_103",
+        "capacity": 2
+      }
+    ],
+    "nurses": [
+      {
+        "id": "nurse_001",
+        "skill_level": 2,
+        "working_shifts": [
+          {
+            "day": 1,
+            "shift": "morning",
+            "max_load": 5
+          }
+        ]
+      }
+    ],
+    "weights": {
+      "room_mixed_age": 1,
+      "room_nurse_skill": 1,
+      "continuity_of_care": 1,
+      "nurse_eccessive_workload": 1,
+      "open_operating_theater": 1,
+      "surgeon_transfer": 1,
+      "patient_delay": 1,
+      "unscheduled_optional": 1
+    }
+  }
+  
